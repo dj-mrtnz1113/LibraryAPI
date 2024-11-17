@@ -18,7 +18,7 @@ use Firebase\JWT\Key;
 require '../src/vendor/autoload.php';
 
 $app = new \Slim\App;
-
+```
 
 ## Endpoints
 
