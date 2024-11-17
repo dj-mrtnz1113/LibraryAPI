@@ -1,5 +1,5 @@
 # LIBRARY API
-
+<h1 style="font-family: 'Arial', sans-serif;">LIBRARY API</h1>
 The **Library API** is a RESTful web service that allows users to interact with a library database. This API enables users to perform actions such as adding, retrieving, updating, and deleting books, authors, and other resources in the library system. The API is built using **Slim Framework** for routing and **JWT (JSON Web Tokens)** for authentication.
 
 ---
