@@ -84,7 +84,7 @@ Content-Type: application/json
     "username": "newuser",
     "password": "userpassword"
 }
-
+```
 #### Example Response:
 ```bash
 {
@@ -109,14 +109,14 @@ Authorization: Bearer <existing_jwt_token>
     "old_password": "oldpassword",
     "new_password": "newpassword"
 }
+```
 
 #### Example Response:
 ```bash
 {
     "status": "success",
     "data": {
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiAiaHR0cHM6Ly9saWJyYXJ5Lm9yZyIsImF1ZCI6ICJodHRwczovL2xpYnJhcnkub3JnIiwiaWF0IjogMTY4MzQ1Mzc2MywiZXhwIjogMTY4MzQ1NzYwMywiZGF0YSI6IHsiaWR1c2VySWQiOiAxMiwgInJvbGVpZCI6IDJ9fQ.X4dqKjKgHfFvPOtLnDlEqf5zwQtG2BYDs5KvP6L3E8Y"
-    }
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiAiaHR0cHM6Ly9saWJyYXJ5Lm9yZyIsImF1ZCI6ICJodHRwczovL2xpYnJhcnkub3JnIiwiaWF0IjogMTY4MzQ1Mzc2MywiZXhwIjogMTY4MzQ1NzYwMywiZGF0YSI6IHsiaWR1c2VySWQiOiAxMiwgInJvbGVpZCI6IDJ9fQ.X4dqKjKgHfFvPOtLnDlEqf5zwQtG2BYDs5KvP6L3E8Y"}
 }
 ```
 
@@ -143,8 +143,7 @@ Authorization: Bearer <admin_jwt_token>
 {
     "status": "success",
     "data": {
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiAiaHR0cHM6Ly9saWJyYXJ5Lm9yZyIsImF1ZCI6ICJodHRwczovL2xpYnJhcnkub3JnIiwiaWF0IjogMTY4MzQ1Mzc2MywiZXhwIjogMTY4MzQ1NzYwMywiZGF0YSI6IHsiaWR1c2VySWQiOiAxMiwgInJvbGVpZCI6IDF9fQ.X4dqKjKgHfFvPOtLnDlEqf5zwQtG2BYDs5KvP6L3E8Y"
-    }
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiAiaHR0cHM6Ly9saWJyYXJ5Lm9yZyIsImF1ZCI6ICJodHRwczovL2xpYnJhcnkub3JnIiwiaWF0IjogMTY4MzQ1Mzc2MywiZXhwIjogMTY4MzQ1NzYwMywiZGF0YSI6IHsiaWR1c2VySWQiOiAxMiwgInJvbGVpZCI6IDF9fQ.X4dqKjKgHfFvPOtLnDlEqf5zwQtG2BYDs5KvP6L3E8Y"}
 }
 ```
 
@@ -169,7 +168,6 @@ Authorization: Bearer <admin_jwt_token>
 {
     "status": "success",
     "data": {
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiAiaHR0cHM6Ly9saWJyYXJ5Lm9yZyIsImF1ZCI6ICJodHRwczovL2xpYnJhcnkub3JnIiwiaWF0IjogMTY4MzQ1Mzc2MywiZXhwIjogMTY4MzQ1NzYwMywiZGF0YSI6IHsiaWR1c2VySWQiOiAxMiwgInJvbGVpZCI6IDF9fQ.X4dqKjKgHfFvPOtLnDlEqf5zwQtG2BYDs5KvP6L3E8Y"
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiAiaHR0cHM6Ly9saWJyYXJ5Lm9yZyIsImF1ZCI6ICJodHRwczovL2xpYnJhcnkub3JnIiwiaWF0IjogMTY4MzQ1Mzc2MywiZXhwIjogMTY4MzQ1NzYwMywiZGF0YSI6IHsiaWR1c2VySWQiOiAxMiwgInJvbGVpZCI6IDF9fQ.X4dqKjKgHfFvPOtLnDlEqf5zwQtG2BYDs5KvP6L3E8Y"}
     }
-}
 ```
