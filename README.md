@@ -119,3 +119,57 @@ Authorization: Bearer <existing_jwt_token>
     }
 }
 ```
+
+
+### 5. **Add a Book (Only by Admin)**
+- **Method**: `POST`
+- **Endpoint**: `/admin/addbook`
+- **Description**: Allows an authenticated admin user to add a new book to the library. The admin must provide the book's name and the author's name. If the author does not exist, a new author is created. The book is linked to the author, and the action is logged with a new JWT token.
+
+#### Example Request:
+```bash
+POST /admin/addbook
+Content-Type: application/json
+Authorization: Bearer <admin_jwt_token>
+
+{
+    "book_name": "The Great Gatsby",
+    "author_name": "F. Scott Fitzgerald"
+}
+```
+
+#### Example Response:
+```bash
+{
+    "status": "success",
+    "data": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiAiaHR0cHM6Ly9saWJyYXJ5Lm9yZyIsImF1ZCI6ICJodHRwczovL2xpYnJhcnkub3JnIiwiaWF0IjogMTY4MzQ1Mzc2MywiZXhwIjogMTY4MzQ1NzYwMywiZGF0YSI6IHsiaWR1c2VySWQiOiAxMiwgInJvbGVpZCI6IDF9fQ.X4dqKjKgHfFvPOtLnDlEqf5zwQtG2BYDs5KvP6L3E8Y"
+    }
+}
+```
+
+### 6. **Delete a Book**
+- **Method**: `DELETE`
+- **Endpoint**: `/admin/deletebook`
+- **Description**: Allows an authenticated admin user to delete a book from the library. The admin needs to provide the book's ID. If successful, the book and its associated author relationship will be deleted. A new JWT token will be issued.
+
+#### Example Request:
+```bash
+DELETE /admin/deletebook
+Content-Type: application/json
+Authorization: Bearer <admin_jwt_token>
+
+{
+    "book_id": 123
+}
+```
+
+#### Example Response:
+```bash
+{
+    "status": "success",
+    "data": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiAiaHR0cHM6Ly9saWJyYXJ5Lm9yZyIsImF1ZCI6ICJodHRwczovL2xpYnJhcnkub3JnIiwiaWF0IjogMTY4MzQ1Mzc2MywiZXhwIjogMTY4MzQ1NzYwMywiZGF0YSI6IHsiaWR1c2VySWQiOiAxMiwgInJvbGVpZCI6IDF9fQ.X4dqKjKgHfFvPOtLnDlEqf5zwQtG2BYDs5KvP6L3E8Y"
+    }
+}
+```
