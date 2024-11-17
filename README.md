@@ -1,4 +1,4 @@
-<h1 style="font-family: 'Montserrat';">LIBRARY API</h1>
+# LIBRARY API
 
 The **Library API** is a RESTful web service that allows users to interact with a library database. This API enables users to perform actions such as adding, retrieving, updating, and deleting books, authors, and other resources in the library system. The API is built using **Slim Framework** for routing and **JWT (JSON Web Tokens)** for authentication.
 
@@ -47,7 +47,7 @@ Content-Type: application/json
     "data": null
 }
 ```
-
+---
 ### 2. **User Registration**
 - **Method**: `POST`
 - **Endpoint**: `/user/register`
@@ -71,7 +71,7 @@ Content-Type: application/json
     "data": null
 }
 ```
-
+---
 ### 3. **User Authentication**
 - **Method**: `POST`
 - **Endpoint**: `/user/authenticate`
@@ -95,7 +95,7 @@ Content-Type: application/json
     "data": null
 }
 ```
-
+---
 ### 4. **Change User Password**
 - **Method**: `POST`
 - **Endpoint**: `/user/changepassword`
@@ -122,7 +122,7 @@ Authorization: Bearer <jwt_token>
 }
 ```
 
-
+---
 ### 5. **Add a Book (Only by Admin)**
 - **Method**: `POST`
 - **Endpoint**: `/admin/addbook`
@@ -148,7 +148,7 @@ Authorization: Bearer <jwt_token>
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiAiaHR0cHM6Ly9saWJyYXJ5Lm9yZyIsImF1ZCI6ICJodHRwczovL2xpYnJhcnkub3JnIiwiaWF0IjogMTY4MzQ1Mzc2MywiZXhwIjogMTY4MzQ1NzYwMywiZGF0YSI6IHsiaWR1c2VySWQiOiAxMiwgInJvbGVpZCI6IDF9fQ.X4dqKjKgHfFvPOtLnDlEqf5zwQtG2BYDs5KvP6L3E8Y"}
 }
 ```
-
+---
 ### 6. **Delete a Book**
 - **Method**: `DELETE`
 - **Endpoint**: `/admin/deletebook`
@@ -173,7 +173,7 @@ Authorization: Bearer <jwt_token>
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiAiaHR0cHM6Ly9saWJyYXJ5Lm9yZyIsImF1ZCI6ICJodHRwczovL2xpYnJhcnkub3JnIiwiaWF0IjogMTY4MzQ1Mzc2MywiZXhwIjogMTY4MzQ1NzYwMywiZGF0YSI6IHsiaWR1c2VySWQiOiAxMiwgInJvbGVpZCI6IDF9fQ.X4dqKjKgHfFvPOtLnDlEqf5zwQtG2BYDs5KvP6L3E8Y"}
     }
 ```
-
+---
 ### 7. **Update Book Title and Author Name**
 - **Method**: `PUT`
 - **Endpoint**: `/admin/updatebook`
@@ -201,7 +201,7 @@ Authorization: Bearer <jwt_token>
 }
 ```
 
-
+---
 ### 8. **View All Books and Authors**
 - **Method**: `GET`
 - **Endpoint**: `/books`
@@ -233,7 +233,7 @@ Authorization: Bearer <jwt_token>
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiAiaHR0cHM6Ly9saWJyYXJ5Lm9yZyIsImF1ZCI6ICJodHRwczovL2xpYnJhcnkub3JnIiwiaWF0IjogMTY4MzQ1Mzc2MywiZXhwIjogMTY4MzQ1NzYwMywiZGF0YSI6IHsiaWR1c2VySWQiOiAxMiwgInJvbGVpZCI6IDF9fQ.X4dqKjKgHfFvPOtLnDlEqf5zwQtG2BYDs5KvP6L3E8Y"
 }
 ```
-
+---
 ### 9. **Search for Books by Title or Author**
 - **Method**: `POST`
 - **Endpoint**: `/user/books/search`
@@ -270,6 +270,7 @@ Authorization: Bearer <valid_jwt_token>
 ```
 
 
+---
 ### 10. **Delete User**
 - **Method**: `DELETE`
 - **Endpoint**: `/admin/deleteuser`
@@ -294,7 +295,7 @@ Authorization: Bearer <valid_jwt_token>
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiAiaHR0cHM6Ly9saWJyYXJ5Lm9yZyIsImF1ZCI6ICJodHRwczovL2xpYnJhcnkub3JnIiwiaWF0IjogMTY4MzQ1Mzc2MywiZXhwIjogMTY4MzQ1NzYwMywiZGF0YSI6IHsiaWR1c2VySWQiOiAxMiwgInJvbGVpZCI6IDF9fQ.X4dqKjKgHfFvPOtLnDlEqf5zwQtG2BYDs5KvP6L3E8Y"}
 }
 ```
-
+---
 ### 11. **Add Book to Favorites**
 - **Method**: `POST`
 - **Endpoint**: `/user/addfavorite`
@@ -319,7 +320,7 @@ Authorization: Bearer <valid_jwt_token>
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiAiaHR0cHM6Ly9saWJyYXJ5Lm9yZyIsImF1ZCI6ICJodHRwczovL2xpYnJhcnkub3JnIiwiaWF0IjogMTY4MzQ1Mzc2MywiZXhwIjogMTY4MzQ1NzYwMywiZGF0YSI6IHsiaWR1c2VySWQiOiAxMiwgInJvbGVpZCI6IDF9fQ.X4dqKjKgHfFvPOtLnDlEqf5zwQtG2BYDs5KvP6L3E8Y"}
 }
 ```
-
+---
 ### 12. **Remove Book from Favorites**
 - **Method**: `DELETE`
 - **Endpoint**: `/user/removefavorite`
