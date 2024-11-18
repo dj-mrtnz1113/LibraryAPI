@@ -1,4 +1,4 @@
-# LIBRARY API
+# 📖 LIBRARY API
 
 The **Library API** is a RESTful web service that allows users to interact with a library database. This API enables users to perform actions such as adding, retrieving, updating, and deleting books, authors, and other resources in the library system. The API is built using **Slim Framework** for routing and **JWT (JSON Web Tokens)** for authentication.
 
@@ -24,7 +24,7 @@ $app = new \Slim\App;
 
 ## Endpoints
 
-### 1. **Admin Registration**
+### 1. **✒️Admin Registration**
 - **Method**: `POST`
 - **Endpoint**: `/admin/register`
 - **Description**: Registers a new admin user. The registration is successful if the username does not already exist in the database. The password is hashed using SHA256 for security.
@@ -49,7 +49,7 @@ Content-Type: application/json
 }
 ```
 ---
-### 2. **User Registration**
+### 2. **✒️User Registration**
 - **Method**: `POST`
 - **Endpoint**: `/user/register`
 - **Description**: Registers a new regular user. The registration is successful if the username does not already exist in the database. The password is hashed using SHA256 for security, and the user is assigned a roleid of 2 (User).
@@ -74,7 +74,7 @@ Content-Type: application/json
 }
 ```
 ---
-### 3. **User Authentication**
+### 3. **🔐User Authentication**
 - **Method**: `POST`
 - **Endpoint**: `/user/authenticate`
 - **Description**: Authenticates a user by checking the provided username and password. If the credentials are valid, the server generates a JWT token that the user can use to authenticate future requests. The password is hashed using SHA256 for security.
@@ -99,7 +99,7 @@ Content-Type: application/json
 }
 ```
 ---
-### 4. **Change User Password**
+### 4. **🔑Change User Password**
 - **Method**: `POST`
 - **Endpoint**: `/user/changepassword`
 - **Description**: Allows an authenticated user to change their password. The user must provide the old password and the new password. The old password is checked, and if it matches the current password, it is updated to the new one. A new JWT token is generated for the user after the password change, and the old token is marked as used.
@@ -128,7 +128,7 @@ Authorization: Bearer <jwt_token>
 ```
 
 ---
-### 5. **Add a Book (Only by Admin)**
+### 5. **➕Add a Book (Only by Admin)**
 - **Method**: `POST`
 - **Endpoint**: `/admin/addbook`
 - **Description**: Allows an authenticated admin user to add a new book to the library. The admin must provide the book's name and the author's name. If the author does not exist, a new author is created. The book is linked to the author, and the action is logged with a new JWT token.
@@ -156,7 +156,7 @@ Authorization: Bearer <jwt_token>
 }
 ```
 ---
-### 6. **Delete a Book**
+### 6. **🗑️Delete a Book**
 - **Method**: `DELETE`
 - **Endpoint**: `/admin/deletebook`
 - **Description**: Allows an authenticated admin user to delete a book from the library. The admin needs to provide the book's ID. If successful, the book and its associated author relationship will be deleted. A new JWT token will be issued.
@@ -183,7 +183,7 @@ Authorization: Bearer <jwt_token>
 }
 ```
 ---
-### 7. **Update Book Title and Author Name**
+### 7. **⬆️Update Book Title and Author Name**
 - **Method**: `PUT`
 - **Endpoint**: `/admin/updatebook`
 - **Description**: Allows an authenticated admin user to update the title of an existing book and change its associated author. If the new author does not exist, a new entry will be created in the `authors` table.
@@ -213,7 +213,7 @@ Authorization: Bearer <jwt_token>
 ```
 
 ---
-### 8. **View All Books and Authors**
+### 8. **🔎View All Books and Authors**
 - **Method**: `GET`
 - **Endpoint**: `/books`
 - **Description**: Allows the user to retrieve a list of all books along with their respective authors. The request requires a valid JWT token for authentication.
@@ -245,7 +245,7 @@ Authorization: Bearer <jwt_token>
 }
 ```
 ---
-### 9. **Search for Books by Title or Author**
+### 9. **🔎Search for Books by Title or Author**
 - **Method**: `POST`
 - **Endpoint**: `/user/books/search`
 - **Description**: Allows the user to search for books by either the title or author name. The request requires a valid JWT token for authentication.
@@ -283,7 +283,7 @@ Authorization: Bearer <valid_jwt_token>
 
 
 ---
-### 10. **Delete User**
+### 10. **🗑️Delete User**
 - **Method**: `DELETE`
 - **Endpoint**: `/admin/deleteuser`
 - **Description**: Allows an admin user to delete another user. The request requires a valid JWT token for authentication and authorization.
@@ -310,7 +310,7 @@ Authorization: Bearer <valid_jwt_token>
 }
 ```
 ---
-### 11. **Add Book to Favorites**
+### 11. **🔖Add Book to Favorites**
 - **Method**: `POST`
 - **Endpoint**: `/user/addfavorite`
 - **Description**: Allows a user to add a book to their list of favorites. This request requires a valid JWT token for authentication.
@@ -337,7 +337,7 @@ Authorization: Bearer <valid_jwt_token>
 }
 ```
 ---
-### 12. **Remove Book from Favorites**
+### 12. **🗑️Remove Book from Favorites**
 - **Method**: `DELETE`
 - **Endpoint**: `/user/removefavorite`
 - **Description**: Allows a user to remove a book from their list of favorites. This request requires a valid JWT token for authentication.
