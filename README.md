@@ -32,30 +32,30 @@ $app = new \Slim\App;
 
 ## Endpoints
 
-### 1. **✒️Admin Registration**
-- **Method**: `POST`
-- **Endpoint**: `/admin/register`
-- **Description**: Registers a new admin user. The registration is successful if the username does not already exist in the database. The password is hashed using SHA256 for security.
+ 1. **✒️Admin Registration**
+    - **Method**: `POST`
+    - **Endpoint**: `/admin/register`
+    - **Description**: Registers a new admin user. The registration is successful if the username does not already exist in the database. The password is hashed using SHA256 for security.
 
-#### Example Request:
-```bash
-POST /admin/register
-Content-Type: application/json
-```
-```json
-{
-    "username": "adminuser",
-    "password": "securepassword"
-}
-```
+    - **Example Request**:
+        ```bash
+        POST /admin/register
+        Content-Type: application/json
+        ```
+        ```json
+        {
+            "username": "adminuser",
+            "password": "securepassword"
+        }
+        ```
 
-#### Example Response:
-```json
-{
-    "status": "success",
-    "data": null
-}
-```
+    - **Example Response**:
+        ```json
+        {
+            "status": "success",
+            "data": null
+        }
+        ```
 ---
 ### 2. **✒️User Registration**
 - **Method**: `POST`
