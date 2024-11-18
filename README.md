@@ -33,7 +33,8 @@ $app = new \Slim\App;
 ```bash
 POST /admin/register
 Content-Type: application/json
-
+```
+```json
 {
     "username": "adminuser",
     "password": "securepassword"
@@ -41,7 +42,7 @@ Content-Type: application/json
 ```
 
 #### Example Response:
-```bash
+```json
 {
     "status": "success",
     "data": null
@@ -57,7 +58,8 @@ Content-Type: application/json
 ```bash
 POST /user/register
 Content-Type: application/json
-
+```
+```json
 {
     "username": "newuser",
     "password": "newpassword"
@@ -65,7 +67,7 @@ Content-Type: application/json
 ```
 
 #### Example Response:
-```bash
+```json
 {
     "status": "success",
     "data": null
@@ -81,14 +83,15 @@ Content-Type: application/json
 ```bash
 POST /user/authenticate
 Content-Type: application/json
-
+```
+```json
 {
     "username": "newuser",
     "password": "userpassword"
 }
 ```
 #### Example Response:
-```bash
+```json
 {
     "status": "success",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiAiaHR0cHM6Ly9saWJyYXJ5Lm9yZyIsImF1ZCI6ICJodHRwczovL2xpYnJhcnkub3JnIiwiaWF0IjogMTY4MzQ1Mzc2MywiZXhwIjogMTY4MzQ1NzYwMywiZGF0YSI6IHsiaWR1c2VySWQiOiAxMiwgInJvbGVpZCI6IDJ9fQ.X4dqKjKgHfFvPOtLnDlEqf5zwQtG2BYDs5KvP6L3E8Y",
@@ -106,7 +109,8 @@ Content-Type: application/json
 POST /user/changepassword
 Content-Type: application/json
 Authorization: Bearer <jwt_token>
-
+```
+```json
 {
     "old_password": "oldpassword",
     "new_password": "newpassword"
@@ -114,11 +118,12 @@ Authorization: Bearer <jwt_token>
 ```
 
 #### Example Response:
-```bash
+```json
 {
     "status": "success",
     "data": {
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiAiaHR0cHM6Ly9saWJyYXJ5Lm9yZyIsImF1ZCI6ICJodHRwczovL2xpYnJhcnkub3JnIiwiaWF0IjogMTY4MzQ1Mzc2MywiZXhwIjogMTY4MzQ1NzYwMywiZGF0YSI6IHsiaWR1c2VySWQiOiAxMiwgInJvbGVpZCI6IDJ9fQ.X4dqKjKgHfFvPOtLnDlEqf5zwQtG2BYDs5KvP6L3E8Y"}
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiAiaHR0cHM6Ly9saWJyYXJ5Lm9yZyIsImF1ZCI6ICJodHRwczovL2xpYnJhcnkub3JnIiwiaWF0IjogMTY4MzQ1Mzc2MywiZXhwIjogMTY4MzQ1NzYwMywiZGF0YSI6IHsiaWR1c2VySWQiOiAxMiwgInJvbGVpZCI6IDJ9fQ.X4dqKjKgHfFvPOtLnDlEqf5zwQtG2BYDs5KvP6L3E8Y"
+    }
 }
 ```
 
@@ -133,7 +138,8 @@ Authorization: Bearer <jwt_token>
 POST /admin/addbook
 Content-Type: application/json
 Authorization: Bearer <jwt_token>
-
+```
+```json
 {
     "book_name": "The Great Gatsby",
     "author_name": "F. Scott Fitzgerald"
