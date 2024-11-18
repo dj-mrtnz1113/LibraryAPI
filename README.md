@@ -5,7 +5,7 @@ The **Library API** is a RESTful web service that allows users to interact with 
 ---
 
 ## Technologies Used
-
+![slim](images/slim.png)
 - **Slim Framework**: A micro-framework for PHP that helps in creating APIs and web applications by providing routing and other essential tools for building RESTful services.
 - **JWT (JSON Web Token)**: A secure and compact way to represent claims between two parties. JWT is used for securely transmitting information between the client and server.
 - **PSR-7**: The **PSR-7 HTTP message** interface defines common methods for handling HTTP requests and responses. We are using it with Slim Framework for HTTP message handling.
